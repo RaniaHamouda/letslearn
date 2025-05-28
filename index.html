@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="siteTitle">Let's Learn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark">
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(var(--bg-primary-rgb-val,26,32,44),0.9)] shadow-xl">
+        <div class="w-full px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center max-w-screen-2xl mx-auto">
+            <a href="#" id="logo"
+                class="text-2xl sm:text-3xl font-bold nav-link-item !text-[var(--accent-primary)] !px-0"
+                data-page="home" data-translate-key="logoText">
+                Let's Learn
+            </a>
+
+            <nav id="desktop-navigation" class="hidden md:flex items-center space-x-0 lg:space-x-px">
+                <a href="#" class="nav-link-item" data-page="home" data-translate-key="navHome">الرئيسية</a>
+                <a href="#" class="nav-link-item" data-page="courses" data-category="تحليل البيانات"
+                    data-translate-key="navDataAnalysis">تحليل البيانات</a>
+                <a href="#" class="nav-link-item" data-page="courses" data-category="الذكاء الاصطناعي"
+                    data-translate-key="navAI">الذكاء الاصطناعي</a>
+                <a href="#" class="nav-link-item" data-page="courses" data-category="البرمجة"
+                    data-translate-key="navProgramming">البرمجة</a>
+                <div class="relative" id="more-menu-container">
+                    <button id="more-menu-button" class="nav-link-item flex items-center" data-translate-key="navMore">
+                        المزيد
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div id="more-menu-dropdown" class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="تطوير الواجهات الأمامية" data-translate-key="navFrontend">Front-end</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="تطوير الواجهات الخلفية" data-translate-key="navBackend">Back-end</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="أمن المعلومات" data-translate-key="navInfoSecurity">أمن المعلومات</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="تطوير تطبيقات الموبايل" data-translate-key="navMobileDev">تطبيقات الموبايل</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="علوم البيانات" data-translate-key="navDataScience">علوم البيانات</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="الحوسبة السحابية" data-translate-key="navCloudComputing">الحوسبة السحابية</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="إنترنت الأشياء" data-translate-key="navIoT">إنترنت الأشياء</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="تطوير الألعاب" data-translate-key="navGameDev">تطوير الألعاب</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="DevOps" data-translate-key="navDevOps">DevOps</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="بلوكتشين" data-translate-key="navBlockchain">بلوكتشين</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="الروبوتات" data-translate-key="navRobotics">الروبوتات</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="أمن سيبراني متقدم" data-translate-key="navAdvCybersecurity">أمن سيبراني متقدم</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="تصميم واجهات وتجربة المستخدم" data-translate-key="navUIUX">UI/UX</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="الحوسبة الكمومية" data-translate-key="navQuantumComputing">الحوسبة الكمومية</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="المعلوماتية الحيوية" data-translate-key="navBioinformatics">المعلوماتية الحيوية</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="الاختراق الأخلاقي" data-translate-key="navEthicalHacking">الاختراق الأخلاقي</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="التكنولوجيا المالية" data-translate-key="navFintech">التكنولوجيا المالية</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="الواقع الممتد (XR)" data-translate-key="navXR">الواقع الممتد (XR)</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="هندسة البيانات" data-translate-key="navDataEngineering">هندسة البيانات</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="التعلم العميق" data-translate-key="navDeepLearning">التعلم العميق</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="تطوير الويب الكامل" data-translate-key="navFullStack">تطوير الويب الكامل</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="هندسة الحلول السحابية" data-translate-key="navCloudSolutionsArch">هندسة الحلول السحابية</a>
+                        <a href="#" class="nav-dropdown-item" data-page="courses" data-category="الأتمتة الروبوتية للعمليات" data-translate-key="navRPA">الأتمتة الروبوتية للعمليات</a>
+                    </div>
+                </div>
+                <div id="desktop-menu-auth-items" class="flex items-center space-x-1 lg:space-x-1.5 ms-1.5 lg:ms-2">
+                    </div>
+            </nav>
+
+            <div class="flex items-center space-x-2 sm:space-x-2.5">
+                <button id="language-toggle" class="btn-header-toggle" title="Switch Language">
+                    <span class="font-semibold">EN</span>
+                </button>
+                <button id="theme-toggle" class="btn-header-toggle">
+                    <i class="fas fa-sun"></i> <i class="fas fa-moon hidden"></i>
+                </button>
+                <div id="auth-container" class="flex items-center space-x-1 sm:space-x-1.5">
+                    </div>
+                <button id="mobile-menu-button" class="md:hidden btn-header-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-app-default bg-app-card shadow-2xl max-h-[calc(70vh-50px)] overflow-y-auto">
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="home" data-translate-key="navHomeMobile">الرئيسية</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تحليل البيانات" data-translate-key="navDataAnalysisMobile">تحليل البيانات</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="الذكاء الاصطناعي" data-translate-key="navAIMobile">الذكاء الاصطناعي</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="البرمجة" data-translate-key="navProgrammingMobile">البرمجة</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تطوير الواجهات الأمامية" data-translate-key="navFrontendMobile">Front-end</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تطوير الواجهات الخلفية" data-translate-key="navBackendMobile">Back-end</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="أمن المعلومات" data-translate-key="navInfoSecurityMobile">أمن المعلومات</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تطوير تطبيقات الموبايل" data-translate-key="navMobileDevMobile">تطبيقات الموبايل</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="علوم البيانات" data-translate-key="navDataScienceMobile">علوم البيانات</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="الحوسبة السحابية" data-translate-key="navCloudComputingMobile">الحوسبة السحابية</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="إنترنت الأشياء" data-translate-key="navIoTMobile">إنترنت الأشياء</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تطوير الألعاب" data-translate-key="navGameDevMobile">تطوير الألعاب</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="DevOps" data-translate-key="navDevOpsMobile">DevOps</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="بلوكتشين" data-translate-key="navBlockchainMobile">بلوكتشين</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="الروبوتات" data-translate-key="navRoboticsMobile">الروبوتات</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="أمن سيبراني متقدم" data-translate-key="navAdvCybersecurityMobile">أمن سيبراني متقدم</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تصميم واجهات وتجربة المستخدم" data-translate-key="navUIUXMobile">UI/UX</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="الحوسبة الكمومية" data-translate-key="navQuantumComputingMobile">الحوسبة الكمومية</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="المعلوماتية الحيوية" data-translate-key="navBioinformaticsMobile">المعلوماتية الحيوية</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="الاختراق الأخلاقي" data-translate-key="navEthicalHackingMobile">الاختراق الأخلاقي</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="التكنولوجيا المالية" data-translate-key="navFintechMobile">التكنولوجيا المالية</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="الواقع الممتد (XR)" data-translate-key="navXRMobile">الواقع الممتد (XR)</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="هندسة البيانات" data-translate-key="navDataEngineeringMobile">هندسة البيانات</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="التعلم العميق" data-translate-key="navDeepLearningMobile">التعلم العميق</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="تطوير الويب الكامل" data-translate-key="navFullStackMobile">تطوير الويب الكامل</a>
+            <a href="#" class="block nav-link-item text-center py-3 border-b border-app-default" data-page="courses" data-category="هندسة الحلول السحابية" data-translate-key="navCloudSolutionsArchMobile">هندسة الحلول السحابية</a>
+            <a href="#" class="block nav-link-item text-center py-3" data-page="courses" data-category="الأتمتة الروبوتية للعمليات" data-translate-key="navRPAMobile">الأتمتة الروبوتية للعمليات</a>
+             <div id="mobile-menu-auth-items" class="border-t border-app-default pt-2 pb-1">
+                 </div>
+        </div>
+    </header>
+
+    <main class="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8 min-h-[calc(100vh-180px)] max-w-screen-xl mx-auto">
+        <div id="page-home" class="page active">
+            <section
+                class="text-center py-10 md:py-14 lg:py-16 relative overflow-hidden rounded-2xl md:rounded-3xl bg-app-card">
+                <div class="absolute inset-0 z-0 opacity-[0.025]" id="particles-js"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--bg-primary-rgb-val,26,32,44),0.03)] via-[rgba(var(--bg-secondary-rgb-val,45,55,72),0.03)] to-[rgba(var(--bg-primary-rgb-val,26,32,44),0.03)] z-0">
+                </div>
+                <div class="relative z-10 px-2 sm:px-4 scroll-reveal max-w-7xl mx-auto">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold mb-4 sm:mb-5 text-app-heading animate-fadeInUpStagger"
+                        style="animation-delay: 0.05s;" data-translate-key="heroTitle">
+                        استكشف آفاق <span style="color: var(--accent-primary);">المستقبل الرقمي</span>
+                    </h1>
+                    <p class="text-md sm:text-lg lg:text-xl text-app-paragraph mb-7 sm:mb-10 max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto animate-fadeInUpStagger"
+                        style="animation-delay: 0.15s;" data-translate-key="heroSubtitle">
+                        Let's Learn: بوابتك نحو إتقان أحدث التقنيات والبرمجيات في عالم يتسارع نحو الغد.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 lg:gap-6 px-2 sm:px-0"
+                        id="home-categories-grid">
+                        </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-courses" class="page">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6 md:mb-8 scroll-reveal">
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <button id="back-button" class="btn btn-header-toggle !p-2 hidden"><i
+                            class="fas fa-arrow-right"></i></button>
+                    <h2 id="courses-title" class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-app-heading"
+                        data-translate-key="exploreCategoryBase"></h2>
+                </div>
+                <button id="add-course-button"
+                    class="btn btn-secondary hidden text-xs sm:text-sm md:text-base mt-4 sm:mt-0">
+                    <i class="fas fa-plus-circle me-1.5 sm:me-2"></i> <span data-translate-key="addNewCourseBtn">إضافة
+                        كورس جديد</span>
+                </button>
+            </div>
+            <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-7">
+                </div>
+            <div id="load-more-container" class="text-center mt-10 sm:mt-12 md:mt-14">
+                <button id="load-more-courses"
+                    class="btn btn-primary text-sm sm:text-md md:text-base px-6 sm:px-8 py-2.5 sm:py-3">
+                    <i class="fas fa-sync-alt me-1.5 sm:me-2 animate-spin-custom hidden"></i> <span
+                        data-translate-key="loadMoreBtn">تحميل المزيد</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="page-login"
+            class="page max-w-lg mx-auto bg-app-card p-6 sm:p-8 md:p-10 rounded-xl mt-8 sm:mt-10 scroll-reveal">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-5 sm:mb-7 text-app-heading"
+                style="color: var(--accent-primary);" data-translate-key="loginTitle">تسجيل الدخول</h2>
+            <form id="login-form" class="space-y-5">
+                <div>
+                    <label for="login-email" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="emailLabel">البريد الإلكتروني</label>
+                    <input type="email" id="login-email" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="emailPlaceholder">
+                </div>
+                <div>
+                    <label for="login-password" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="passwordLabel">كلمة المرور</label>
+                    <input type="password" id="login-password" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="passwordPlaceholder">
+                </div>
+                <button type="submit" class="w-full btn btn-primary text-sm md:text-base py-3">
+                    <i class="fas fa-sign-in-alt me-2"></i> <span data-translate-key="loginBtn">دخول</span>
+                </button>
+                <p class="mt-6 text-center text-xs sm:text-sm text-app-subheading">
+                    <span data-translate-key="noAccountPrompt">ليس لديك حساب؟</span> <a href="#" id="show-signup"
+                        class="font-medium hover:underline" style="color: var(--accent-secondary);"
+                        data-translate-key="createAccountLink">إنشاء حساب جديد</a>
+                </p>
+            </form>
+        </div>
+
+        <div id="page-signup"
+            class="page max-w-lg mx-auto bg-app-card p-6 sm:p-8 md:p-10 rounded-xl mt-8 sm:mt-10 scroll-reveal">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-5 sm:mb-7 text-app-heading"
+                style="color: var(--accent-secondary);" data-translate-key="signupTitle">إنشاء حساب جديد</h2>
+            <form id="signup-form" class="space-y-4">
+                <div>
+                    <label for="signup-name" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="fullNameLabel">الاسم الكامل</label>
+                    <input type="text" id="signup-name" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="fullNamePlaceholder">
+                </div>
+                <div>
+                    <label for="signup-dob" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="dobLabel">تاريخ الميلاد</label>
+                    <input type="date" id="signup-dob" required class="input-app-default text-sm md:text-base">
+                </div>
+                <div>
+                    <label for="signup-email" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="emailLabel">البريد الإلكتروني</label>
+                    <input type="email" id="signup-email" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="emailPlaceholder">
+                </div>
+                <div>
+                    <label for="signup-password" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="passwordLabel">كلمة المرور</label>
+                    <input type="password" id="signup-password" required minlength="6"
+                        class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="passwordPlaceholder">
+                </div>
+                <div>
+                    <label for="signup-confirm-password" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="confirmPasswordLabel">تأكيد كلمة المرور</label>
+                    <input type="password" id="signup-confirm-password" required
+                        class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="confirmPasswordPlaceholder">
+                </div>
+                <div class="pt-2">
+                    <label class="block text-sm font-medium text-app-paragraph mb-2"
+                        data-translate-key="accountTypeLabel">نوع الحساب:</label>
+                    <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                        <label class="flex items-center text-app-paragraph cursor-pointer">
+                            <input type="radio" name="signup-role" value="user" class="form-radio" checked>
+                            <span class="ms-2" data-translate-key="userRole">مستخدم</span>
+                        </label>
+                        <label class="flex items-center text-app-paragraph cursor-pointer">
+                            <input type="radio" name="signup-role" value="admin" class="form-radio">
+                            <span class="ms-2" data-translate-key="adminRole">مسؤول</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="w-full btn btn-secondary text-sm md:text-base py-3">
+                    <i class="fas fa-user-plus me-2"></i> <span data-translate-key="signupBtn">تسجيل</span>
+                </button>
+                <p class="mt-6 text-center text-xs sm:text-sm text-app-subheading">
+                    <span data-translate-key="alreadyHaveAccountPrompt"> لديك حساب بالفعل؟</span> <a href="#"
+                        id="show-login" class="font-medium hover:underline" style="color: var(--accent-primary);"
+                        data-translate-key="loginLink">تسجيل الدخول</a>
+                </p>
+            </form>
+        </div>
+
+        <div id="page-profile" class="page max-w-2xl mx-auto bg-app-card p-6 sm:p-8 md:p-10 rounded-xl mt-8 sm:mt-10 scroll-reveal">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8 text-app-heading" style="color: var(--accent-primary);" data-translate-key="profilePageTitle">الملف الشخصي</h2>
+
+            <div class="text-center mb-6">
+                <img id="profile-image-preview" src="https://placehold.co/120x120/4A5568/FFFFFF?text=U&font=changa" alt="Profile Picture" class="profile-image-preview">
+                <label for="profile-image-upload" class="btn btn-secondary !py-1.5 !px-3 !text-xs cursor-pointer mt-2">
+                    <i class="fas fa-camera me-1.5"></i> <span data-translate-key="profileChangeImage">تغيير الصورة</span>
+                </label>
+                <input type="file" id="profile-image-upload" class="hidden" accept="image/*">
+            </div>
+
+            <form id="profile-form" class="space-y-5">
+                <div>
+                    <label for="profile-name" class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="fullNameLabel">الاسم الكامل</label>
+                    <input type="text" id="profile-name" required class="input-app-default text-sm md:text-base">
+                </div>
+                <div>
+                    <label for="profile-email" class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="emailLabel">البريد الإلكتروني</label>
+                    <input type="email" id="profile-email" disabled class="input-app-default text-sm md:text-base bg-opacity-50 !cursor-not-allowed">
+                </div>
+                <div>
+                    <label for="profile-dob" class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="dobLabel">تاريخ الميلاد</label>
+                    <input type="date" id="profile-dob" class="input-app-default text-sm md:text-base">
+                </div>
+                 <div>
+                    <label class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="profileUserRoleLabel">نوع الحساب</label>
+                    <p id="profile-user-role" class="input-app-default bg-opacity-60 !cursor-default text-sm md:text-base py-2.5 px-3.5 h-[calc(0.875rem*2+1.75rem)] flex items-center"></p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="profileUserIdLabel">معرف المستخدم (User ID)</label>
+                    <p id="profile-user-id" class="input-app-default bg-opacity-60 !cursor-default text-sm md:text-base py-2.5 px-3.5 h-[calc(0.875rem*2+1.75rem)] flex items-center break-all"></p>
+                </div>
+                <button type="submit" class="w-full btn btn-primary text-sm md:text-base py-3">
+                    <i class="fas fa-save me-2"></i> <span data-translate-key="profileUpdateBtn">تحديث الملف الشخصي</span>
+                </button>
+            </form>
+
+            <hr class="my-6 sm:my-8 border-app-default">
+
+            <h3 class="text-lg sm:text-xl font-semibold text-center mb-4 sm:mb-6 text-app-heading" data-translate-key="profileChangePasswordTitle">تغيير كلمة المرور</h3>
+            <form id="change-password-form" class="space-y-5">
+                <div>
+                    <label for="current-password" class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="profileCurrentPassword">كلمة المرور الحالية</label>
+                    <input type="password" id="current-password" required class="input-app-default text-sm md:text-base">
+                </div>
+                <div>
+                    <label for="new-password" class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="profileNewPassword">كلمة المرور الجديدة</label>
+                    <input type="password" id="new-password" required minlength="6" class="input-app-default text-sm md:text-base">
+                </div>
+                <div>
+                    <label for="confirm-new-password" class="block text-sm font-medium text-app-paragraph mb-1.5" data-translate-key="profileConfirmNewPassword">تأكيد كلمة المرور الجديدة</label>
+                    <input type="password" id="confirm-new-password" required class="input-app-default text-sm md:text-base">
+                </div>
+                <button type="submit" class="w-full btn btn-secondary text-sm md:text-base py-3">
+                    <i class="fas fa-key me-2"></i> <span data-translate-key="profileUpdatePasswordBtn">تحديث كلمة المرور</span>
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="text-center p-6 sm:p-8 mt-10 sm:mt-12 border-t border-app-default bg-app-secondary">
+        <p class="mb-1.5 text-xs sm:text-sm text-app-subheading">
+            <span data-translate-key="copyrightText">© <span id="current-year"></span> Let's Learn. جميع الحقوق
+                محفوظة.</span>
+        </p>
+        <p class="text-2xs sm:text-xs text-app-paragraph">
+            <span data-translate-key="madeWithLoveTextStart">صُنع بحب</span> <i class="fas fa-heartbeat"
+                style="color:var(--accent-danger); animation: pulseHeart 1.5s infinite;"></i> <span
+                data-translate-key="madeWithLoveTextEnd"></span>
+        </p>
+        <style> @keyframes pulseHeart { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } } </style>
+    </footer>
+
+    <button id="scrollToTopBtn" data-translate-title-key="scrollToTopTitle" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="addCourseModal" class="modal">
+        <div class="modal-content relative">
+            <span class="close-button" id="closeAddCourseModal">×</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-center mb-5 sm:mb-6" style="color: var(--accent-primary);"
+                data-translate-key="addCourseModalTitle">إضافة كورس جديد</h3>
+            <form id="add-course-form" class="space-y-4 sm:space-y-5">
+                <div>
+                    <label for="course-name" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseNameLabel">اسم الكورس</label>
+                    <input type="text" id="course-name" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="courseNamePlaceholder">
+                </div>
+                <div>
+                    <label for="course-section" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseSectionLabel">القسم</label>
+                    <select id="course-section" required
+                        class="select-app-default text-sm md:text-base appearance-none">
+                        <option value="" disabled selected data-translate-key="selectSectionOption">-- اختر القسم --
+                        </option>
+                        </select>
+                </div>
+                <div>
+                    <label for="course-link" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseLinkLabel">رابط الكورس</label>
+                    <input type="url" id="course-link" required class="input-app-default text-sm md:text-base"
+                        placeholder="https://example.com/course-link"
+                        data-translate-placeholder-key="courseLinkPlaceholderGeneric">
+                </div>
+                <div>
+                    <label for="course-image-upload-add" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseImageUploadLabel">رفع صورة الكورس</label>
+                    <input type="file" id="course-image-upload-add" accept="image/*"
+                        class="input-app-default text-sm md:text-base file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[var(--accent-secondary)] file:text-white hover:file:bg-opacity-80">
+                    <div class="image-preview-container">
+                        <img id="course-image-preview-add" src="#" alt="Preview" class="image-preview" />
+                    </div>
+                </div>
+                <button type="submit" class="w-full btn btn-primary text-sm md:text-base py-3">
+                    <i class="fas fa-plus-circle me-2"></i> <span data-translate-key="addCourseBtnModal">إضافة
+                        الكورس</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="editCourseModal" class="modal">
+        <div class="modal-content relative">
+            <span class="close-button" id="closeEditCourseModal">×</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-center mb-5 sm:mb-6" style="color: var(--accent-secondary);"
+                data-translate-key="editCourseModalTitle">تعديل الكورس</h3>
+            <form id="edit-course-form" class="space-y-4 sm:space-y-5">
+                <input type="hidden" id="edit-course-id">
+                <input type="hidden" id="edit-course-existing-image-url">
+                <div>
+                    <label for="edit-course-name" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseNameLabel">اسم الكورس</label>
+                    <input type="text" id="edit-course-name" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="courseNamePlaceholder">
+                </div>
+                <div>
+                    <label for="edit-course-section" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseSectionLabel">القسم</label>
+                    <select id="edit-course-section" required
+                        class="select-app-default text-sm md:text-base appearance-none">
+                        <option value="" disabled data-translate-key="selectSectionOption">-- اختر القسم --</option>
+                        </select>
+                </div>
+                <div>
+                    <label for="edit-course-link" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseLinkLabel">رابط الكورس</label>
+                    <input type="url" id="edit-course-link" required class="input-app-default text-sm md:text-base"
+                        placeholder="https://example.com/course-link"
+                        data-translate-placeholder-key="courseLinkPlaceholderGeneric">
+                </div>
+                <div>
+                    <label for="course-image-upload-edit" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="courseImageUploadLabel">تغيير صورة الكورس (اختياري)</label>
+                    <input type="file" id="course-image-upload-edit" accept="image/*"
+                        class="input-app-default text-sm md:text-base file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[var(--accent-secondary)] file:text-white hover:file:bg-opacity-80">
+                    <div class="image-preview-container">
+                        <img id="course-image-preview-edit" src="#" alt="Preview" class="image-preview" />
+                        <button type="button" id="remove-course-image-edit"
+                            class="btn btn-danger remove-image-btn hidden" data-translate-key="removeImageBtn">إزالة
+                            الصورة الحالية</button>
+                    </div>
+                </div>
+                <button type="submit" class="w-full btn btn-secondary text-sm md:text-base py-3">
+                    <i class="fas fa-save me-2"></i> <span data-translate-key="saveChangesBtn">حفظ التعديلات</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="adminPasswordModal" class="modal">
+        <div class="modal-content relative">
+            <span class="close-button" id="closeAdminPasswordModal">×</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-center mb-5 sm:mb-6" style="color: var(--accent-danger);"
+                data-translate-key="adminVerifyTitle">تحقق هوية المسؤول</h3>
+            <form id="admin-password-form" class="space-y-5">
+                <div>
+                    <label for="admin-password" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="controlPasswordLabel">كلمة مرور التحكم</label>
+                    <input type="password" id="admin-password" required class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="controlPasswordPlaceholder">
+                </div>
+                <button type="submit" class="w-full btn btn-danger text-sm md:text-base py-3">
+                    <i class="fas fa-user-shield me-2"></i> <span data-translate-key="confirmIdentityBtn">تأكيد
+                        الهوية</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupAdminVerifyModal" class="modal">
+        <div class="modal-content relative">
+            <span class="close-button" id="closeSignupAdminVerifyModal">×</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-center mb-5 sm:mb-6" style="color: var(--accent-secondary);"
+                data-translate-key="confirmAdminAccountTitle">تأكيد حساب المسؤول</h3>
+            <form id="signup-admin-verify-form" class="space-y-5">
+                <div>
+                    <label for="signup-admin-verify-password"
+                        class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="enterControlPasswordAdminSignup">أدخل كلمة مرور التحكم لإنشاء حساب
+                        مسؤول</label>
+                    <input type="password" id="signup-admin-verify-password" required
+                        class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="controlPasswordPlaceholder">
+                </div>
+                <button type="submit" class="w-full btn btn-secondary text-sm md:text-base py-3">
+                    <i class="fas fa-key me-2"></i> <span data-translate-key="verifyBtn">تحقق</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupPasswordModal" class="modal">
+        <div class="modal-content relative">
+            <span class="close-button" id="closeSignupPasswordModal">×</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-center mb-5 sm:mb-6" style="color: var(--accent-secondary);"
+                data-translate-key="accessSignupVerificationTitle">التحقق للوصول لإنشاء الحساب</h3>
+            <form id="signup-password-form" class="space-y-5">
+                <div>
+                    <label for="signup-access-password" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="accessPasswordLabel">كلمة مرور الوصول</label>
+                    <input type="password" id="signup-access-password" required
+                        class="input-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="accessPasswordPlaceholder">
+                </div>
+                <button type="submit" class="w-full btn btn-secondary text-sm md:text-base py-3">
+                    <i class="fas fa-key me-2"></i> <span data-translate-key="loginBtn">دخول</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="customAlertModal" class="modal items-center justify-center">
+        <div class="modal-content text-center max-w-sm sm:max-w-md p-6 sm:p-8 relative">
+            <span class="close-button"
+                onclick="document.getElementById('customAlertModal').style.display='none'">×</span>
+            <div id="customAlertIcon" class="mb-4 sm:mb-5 text-4xl sm:text-5xl"></div>
+            <h3 id="customAlertTitle" class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-app-heading"></h3>
+            <p id="customAlertMessage" class="mb-5 sm:mb-6 text-sm sm:text-base text-app-paragraph"></p>
+            <button id="customAlertOkButton" class="btn btn-primary px-6 sm:px-8 py-2 sm:py-2.5 text-sm sm:text-base"
+                data-translate-key="okButton">مفهوم</button>
+        </div>
+    </div>
+
+    <div id="commentsModal" class="modal">
+        <div class="modal-content comment-modal-content relative">
+            <span class="close-button" id="closeCommentsModal">×</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-center mb-5 sm:mb-6" style="color: var(--accent-primary);"
+                data-translate-key="commentsModalTitle">التعليقات</h3>
+            <div id="comments-list-container" class="comments-list">
+                </div>
+            <form id="add-comment-form" class="mt-6 space-y-3">
+                <input type="hidden" id="comment-course-id">
+                <input type="hidden" id="editing-comment-id">
+                <div>
+                    <label for="comment-text" class="block text-sm font-medium text-app-paragraph mb-1.5"
+                        data-translate-key="addCommentLabel">إضافة تعليق:</label>
+                    <textarea id="comment-text" required class="textarea-app-default text-sm md:text-base"
+                        data-translate-placeholder-key="commentPlaceholder"></textarea>
+                </div>
+                <button type="submit" class="w-full btn btn-primary text-sm md:text-base py-2.5">
+                    <i class="fas fa-paper-plane me-2"></i> <span data-translate-key="submitCommentBtn">إرسال التعليق</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
